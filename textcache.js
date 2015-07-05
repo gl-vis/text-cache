@@ -8,7 +8,7 @@ var globals = window || process.global || {}
 var __TEXT_CACHE  = globals.__TEXT_CACHE || {}
 globals.__TEXT_CACHE = {}
 
-function textGet(font, str) {
+function textGet(font, text) {
   var fontcache = __TEXT_CACHE[font]
    if(!fontcache) {
      fontcache = __TEXT_CACHE[font] = {}
