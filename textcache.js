@@ -19,7 +19,7 @@ function unwrap(mesh) {
     for(var j=0; j<3; ++j) {
       var point = positions[tri[j]]
       data[ptr++] = point[0]
-      data[ptr++] = point[1] + 2
+      data[ptr++] = point[1] + 1.4
       shapeX      = Math.max(point[0], shapeX)
     }
   }
@@ -57,11 +57,14 @@ function textGet(font, text) {
          buffer[i] = textGet(font, parts[i])
          bufferSize += buffer[i].data.length
          shapeX += buffer[i].shape
+         if(i>0) {
+           shapeX += 0.02
+         }
        }
 
        var data = new Float32Array(bufferSize)
        var ptr     = 0
-       var xOffset = 0
+       var xOffset = -0.5 * shapeX
        for(var i=0; i<buffer.length; ++i) {
          var bdata = buffer[i].data
          for(var j=0; j<bdata.length; j+=2) {
@@ -73,7 +76,7 @@ function textGet(font, text) {
 
        mesh = fontcache[text] = {
          data:  data,
-         shape: xOffset
+         shape: shapeX
        }
      }
    }
