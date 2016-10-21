@@ -1,6 +1,6 @@
 {
   "name": "text-cache",
-  "version": "4.0.0",
+  "version": "4.1.0",
   "description": "Internal module - vectorized text pooling for gl-vis",
   "main": "textcache.js",
   "directories": {
