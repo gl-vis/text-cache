@@ -29,7 +29,8 @@ function unwrap(mesh) {
   }
 }
 
-function textGet(font, text) {
+function textGet(font, text, opts) {
+  var opts = opts || {}
   var fontcache = __TEXT_CACHE[font]
    if(!fontcache) {
      fontcache = __TEXT_CACHE[font] = {
@@ -45,7 +46,7 @@ function textGet(font, text) {
        mesh = fontcache[text] = unwrap(vectorizeText(text, {
          triangles:     true,
          font:          font,
-         textAlign:     'left',
+         textAlign:     opts.textAlign || 'left',
          textBaseline:  'alphabetic'
        }))
      } else {
