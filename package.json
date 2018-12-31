@@ -7,7 +7,7 @@
     "example": "example"
   },
   "dependencies": {
-    "vectorize-text": "git://github.com/archmoj/vectorize-text.git#4733c6e3787e8be675b3057deb27d466775d359a"
+    "vectorize-text": "git://github.com/archmoj/vectorize-text.git#805784cb822eb29096555be6d047b45370650e9e"
   },
   "devDependencies": {},
   "scripts": {
