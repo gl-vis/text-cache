@@ -7,10 +7,13 @@
     "example": "example"
   },
   "dependencies": {
-    "vectorize-text": "^3.2.0"
+    "vectorize-text": "^3.2.1"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "chttps": "^1.0.6"
+  },
   "scripts": {
+    "postshrinkwrap": "chttps .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
